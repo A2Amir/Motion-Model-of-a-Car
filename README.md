@@ -65,7 +65,7 @@ Odometry measurements might fail to report accurate position estimates.for examp
 * On a slick wet road, wheel encoder odometry will incur large errors because the wheels will slip, causing them to travel less distance than expected, In addition, the wheels will also slide while braking, further contributing to sensor errors. 
  
  <p align="right">
-<img src="./img/6.jpg" width="693" height="397" alt="   On a slick wet road " />
+<img src="./img/6.jpg" width="593" height="397" alt="   On a slick wet road " />
 <p align="right">
  
 * Roads with lots of bumps create problems for odometry because we are assuming the car travels a straight distance in the direction of its heading. In reality, with a bumpy road, the car is traveling much of this distance not in a straight line, but up and down. 
@@ -77,7 +77,7 @@ Odometry measurements might fail to report accurate position estimates.for examp
 
 
 <p align="right">
-<img src="./img/8.jpg" width="693" height="397" alt="   On a road with lots of turns, " />
+<img src="./img/8.jpg" width="593" height="397" alt="   On a road with lots of turns, " />
 <p align="right">
 
 
