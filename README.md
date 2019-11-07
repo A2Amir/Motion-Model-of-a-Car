@@ -9,32 +9,42 @@ The bicycle model is a simple and useful way to represent how a car moves. Like 
 
 * First, we all ignore all vertical dynamics of the car, so you can assume the car only moves in 2D. This means no flying cars, unfortunately. 
 
-•	Next, assume that like a bicycle the front wheels of the car are connected to the back wheels of the car by a rigid beam with fixed length. 
+* Next, assume that like a bicycle the front wheels of the car are connected to the back wheels of the car by a rigid beam with fixed length. 
 
-•	Assume that the front two wheels act together so they can effectively be epresented as one wheel and The same holds for the two rear wheels.
+* Assume that the front two wheels act together so they can effectively be epresented as one wheel and The same holds for the two rear wheels.
 
-•	Assume the car is also controlled like a bicycle with a steering angle (theta) and some longitudinal velocity in the direction that the car is heading. 
+* Assume the car is also controlled like a bicycle with a steering angle (theta) and some longitudinal velocity in the direction that the car is heading. 
 
  
-<p align="center">
+<p align="right">
 <img src="./img/1.jpg" width="593" height="397" alt=" A motion model" />
-<p align="center">
+<p align="right">
 
 
 You have just learned how the motion of a car can be simplified down to something similar to a bicycle with a bicycle motion model. Next, you'll get reminded how to use the car's heading and velocity of a car to find its new position. 
 
 
+## Yaw Rate and Velocity
 
-
-Yaw Rate and Velocity
-
-A car's heading, or yaw angle, is its orientation. Yaw is often measured from the x-axis in map coordinates with counter clockwise angles being positive. In the bleow situation, the car's yaw is positive pi over 4 radians. Assuming constant turn rate and velocity, the equations to find the new position of the car are shown again below. 
+A car's heading, or Yaw angle, is its orientation. Yaw is often measured from the x-axis in map coordinates with counter clockwise angles being positive. In the bleow situation, the car's Yaw is positive pi over 4 radians. Assuming **constant** turn rate and velocity, the equations to find the new position of the car are shown below. 
  
 
-If the yaw rate is not zero, you have these equations instead, because you'll have to take into account the change in the car's heading (yaw) as it moves.
  
+<p align="right">
+<img src="./img/2.jpg" width="593" height="397" alt=" Yaw Rate and Velocity" />
+<p align="right">
 
-Next, some of other possible rotations of the vehicle besides the yaw are below shown. 
+If the Yaw rate is not zero, you have the below equations instead, because you'll have to take into account the change in the car's heading (Yaw) as it moves.
+ 
+ 
+<p align="right">
+<img src="./img/3.jpg" width="593" height="397" alt=" to take into account the change in the car's heading (Yaw) as it moves." />
+<p align="right">
+ 
+Next, other possible rotations of the vehicle besides the Yaw are below shown.
+<p align="right">
+<img src="./img/4.jpg" width="593" height="397" alt="  other possible rotations of the vehicle " />
+<p align="right">
 
  
 As mentioned, the yaw is the rotation of the car about the z-axis. The other two possible rotations, around the x-axis and y-axis, are called roll and pitch respectively. The question is, will you need to calculate all three rotations to localize the car effectively?
