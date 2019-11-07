@@ -47,27 +47,38 @@ Next, other possible rotations of the vehicle besides the Yaw are below shown.
 <p align="right">
 
  
-As mentioned, the yaw is the rotation of the car about the z-axis. The other two possible rotations, around the x-axis and y-axis, are called roll and pitch respectively. The question is, will you need to calculate all three rotations to localize the car effectively?
+As mentioned, the Yaw is the rotation of the car about the z-axis. The other two possible rotations, around the x-axis and y-axis, are called roll and pitch respectively. The question is, will you need to calculate all three rotations to localize the car effectively?
 The answer is, it is really depend on the road (i.e. the curvature and steepness) In really hilly places, the pitch of the car is pretty important. For most other roads though, the extra effort put into the extra calculations are usually not worth the miniscule improvement in accuracy.
-Odometry
+
+## Odometry
 
 let's look at another commonly used method using odometry, or motion sensor data. For mobile robots, odometry calmly comes from wheel sensors that measure how many times the wheels of the vehicle or robot have turned. 
 
-For instance, the sensor on the below wheel would tell us it has turned twice. Given the circumference of the wheel and this odometry data, you can measure the distance traveled, 
-as indicated by the red line. More specifically, the new position of the car is the starting position of the car plus the x and y components of the odometry, multiplied by the circumference of the wheel. 
+For instance, the sensor on the below wheel would tell us it has turned twice. Given the circumference of the wheel and this odometry data, you can measure the distance traveledas indicated by the red line. More specifically, the new position of the car is the starting position of the car plus the x and y components of the odometry, multiplied by the circumference of the wheel. 
  
+ <p align="right">
+<img src="./img/5.jpg" width="593" height="397" alt="  Odometry " />
+<p align="right">
 
-Odometry measurements might fail to report accurate position estimates .
- for example:
-•	On a slick wet road, wheel encoder odometry will incur large errors because the wheels will slip, causing them to travel less distance than expected, In addition, the wheels will also slide while braking, further contributing to sensor errors. 
+Odometry measurements might fail to report accurate position estimates.for example:
+
+* On a slick wet road, wheel encoder odometry will incur large errors because the wheels will slip, causing them to travel less distance than expected, In addition, the wheels will also slide while braking, further contributing to sensor errors. 
  
-•	Roads with lots of bumps also create problems for odometry because we are assuming the car travels a straight distance in the direction of its heading. In reality, with a bumpy road, the car is traveling much of this distance not in a straight line, but up and down. 
-
-•	On dry paved roads, however, the wheels will travel a distance very close to the expected circumference of the wheel. 
-
-
-•	On a road with lots of turns, wheel odometry works well because even though the heading of the car is changing, it's still moving the expected distance in the direction of its yaw. 
+ <p align="right">
+<img src="./img/6.jpg" width="693" height="397" alt="   On a slick wet road " />
+<p align="right">
  
+* Roads with lots of bumps create problems for odometry because we are assuming the car travels a straight distance in the direction of its heading. In reality, with a bumpy road, the car is traveling much of this distance not in a straight line, but up and down. 
+
+* On dry paved roads, however, the wheels will travel a distance very close to the expected circumference of the wheel. 
+
+
+* On a road with lots of turns, wheel odometry works well because even though the heading of the car is changing, it's still moving the expected distance in the direction of its Yaw. 
+
+
+<p align="right">
+<img src="./img/7.jpg" width="693" height="397" alt="   On a road with lots of turns, " />
+<p align="right">
 
 
  
